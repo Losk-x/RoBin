@@ -172,6 +172,8 @@ Once a branch has been pushed or a PR has been opened, preserve review history b
 
 PR descriptions should help reviewers reason about the change, not just list files. Use this structure unless a narrower repository template exists:
 
+PR titles and descriptions must be written in English. If the original task is in another language, translate it into English instead of copying it verbatim.
+
 ```markdown
 ## Task Description
 <!-- Original task or requirement -->
