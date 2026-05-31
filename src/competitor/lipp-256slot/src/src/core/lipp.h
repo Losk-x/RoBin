@@ -42,9 +42,10 @@ template<class T, class P, bool USE_FMCD = true>
 class LIPP
 {
     static_assert(std::is_arithmetic<T>::value, "LIPP key type must be numeric.");
+    static constexpr int MAX_NODE_SLOTS = 256;
 
     inline int compute_gap_count(int size) {
-        if (size >= 256) return 1;
+        if (size >= MAX_NODE_SLOTS) return 1;
         return 5;
     }
 
@@ -129,12 +130,12 @@ public:
         }
         Node* cur_root = root;
         if (cur_root != last_root) {
-        std::ifstream in("lipp_insert_root.log");
+        std::ifstream in("lipp_256slot_insert_root.log");
         if (!in.is_open()) {
-            std::ofstream out("lipp_insert_root.log");
+            std::ofstream out("lipp_256slot_insert_root.log");
             out << "num_inserts,model_slope,model_intercept,num_slots" << std::endl;
         }
-        std::ofstream out("lipp_insert_root.log", std::ios::app);
+        std::ofstream out("lipp_256slot_insert_root.log", std::ios::app);
         out << stats.num_inserts << "," 
             << cur_root->model.a << ","
             << cur_root->model.b << ","
@@ -146,7 +147,7 @@ public:
         // }
         // Node* cur_root = root;
         // if (cur_root != last_root) {
-        // std::ofstream out("lipp_insert_root.log", std::ios::binary | std::ios::app);
+        // std::ofstream out("lipp_256slot_insert_root.log", std::ios::binary | std::ios::app);
         // out.write(reinterpret_cast<char*>(&stats.num_inserts), sizeof(stats.num_inserts));
         // out.write(reinterpret_cast<char*>(&cur_root->model.a), sizeof(cur_root->model.a));
         // out.write(reinterpret_cast<char*>(&cur_root->model.b), sizeof(cur_root->model.b));
@@ -229,12 +230,12 @@ public:
         // csv format
         Node* cur_root = root;
         if (cur_root != nullptr) {
-        std::ifstream in("lipp_insert_root.log");
+        std::ifstream in("lipp_256slot_insert_root.log");
         if (!in.is_open()) {
-            std::ofstream out("lipp_insert_root.log");
+            std::ofstream out("lipp_256slot_insert_root.log");
             out << "num_inserts,model_slope,model_intercept,num_slots" << std::endl;
         }
-        std::ofstream out("lipp_insert_root.log", std::ios::app);
+        std::ofstream out("lipp_256slot_insert_root.log", std::ios::app);
         out << stats.num_inserts << "," 
             << cur_root->model.a << ","
             << cur_root->model.b << ","
@@ -243,7 +244,7 @@ public:
         // binary format
         // Node* cur_root = root;
         // if (cur_root != nullptr) {
-        // std::ofstream out("lipp_insert_root.log", std::ios::binary | std::ios::app);
+        // std::ofstream out("lipp_256slot_insert_root.log", std::ios::binary | std::ios::app);
         // out.write(reinterpret_cast<char*>(&stats.num_inserts), sizeof(stats.num_inserts));
         // out.write(reinterpret_cast<char*>(&cur_root->model.a), sizeof(cur_root->model.a));
         // out.write(reinterpret_cast<char*>(&cur_root->model.b), sizeof(cur_root->model.b));
@@ -389,7 +390,7 @@ public:
             }
         }
 
-        std::ofstream out_depth_dist("lipp_" + str + "_depth_distribution.log");
+        std::ofstream out_depth_dist("lipp_256slot_" + str + "_depth_distribution.log");
         if (!out_depth_dist.is_open()) {
             std::cerr << "Failed to open file." << std::endl;
             return ;
@@ -406,7 +407,7 @@ public:
         size_t key_idx = 0;
         visit(root, model_stats, key_idx);
 
-        std::ofstream out_file("lipp_" + str + "_model_stats.log");
+        std::ofstream out_file("lipp_256slot_" + str + "_model_stats.log");
         if (!out_file.is_open()) {
             std::cerr << "Failed to open file." << std::endl;
             return ;
@@ -434,7 +435,7 @@ public:
         return ;
     }
     void print_level_model_stats(std::string str) {
-        std::ofstream out_file("lipp_" + str + "_level_model_stats.log");
+        std::ofstream out_file("lipp_256slot_" + str + "_level_model_stats.log");
         if (!out_file.is_open()) {
             std::cerr << "Failed to open file." << std::endl;
             return ;
@@ -539,7 +540,7 @@ public:
         }
     }
     void print_hist_model_stats(std::string str) {
-        std::ofstream out_file("lipp_" + str + "_hist_model_stats.log");
+        std::ofstream out_file("lipp_256slot_" + str + "_hist_model_stats.log");
         if (!out_file.is_open()) {
             std::cerr << "Failed to open file." << std::endl;
             return ;
@@ -583,7 +584,7 @@ public:
     void print_information_gain(std::string str) {
         std::unordered_map<int, std::vector<int>> hist;
         std::unordered_map<int, std::vector<int>> leaf_hist;
-        std::ofstream hist_out_file("lipp_" + str + "_hist.log");
+        std::ofstream hist_out_file("lipp_256slot_" + str + "_hist.log");
         if (!hist_out_file.is_open()) {
             std::cerr << "Failed to open file." << std::endl;
             return ;
@@ -654,7 +655,7 @@ public:
         return original_entropy - after_entropy;
     }
     void print_smo_stats(std::string s) {
-        std::ofstream out("lipp_" + s + "_smo_stats.log");
+        std::ofstream out("lipp_256slot_" + s + "_smo_stats.log");
         if (!out.is_open()) {
             std::cerr << "Failed to open file." << std::endl;
             return;
@@ -748,7 +749,7 @@ public:
         return size;
     }
     void print_node_size(std::string str) const {
-        std::ofstream out_file("lipp_" + str + "_node_size.log");
+        std::ofstream out_file("lipp_256slot_" + str + "_node_size.log");
         if (!out_file.is_open()) {
             std::cerr << "Failed to open file." << std::endl;
             return ;
@@ -805,7 +806,7 @@ public:
             }
         }
 
-        std::ofstream out("lipp_" + str + "_size_stats.log");
+        std::ofstream out("lipp_256slot_" + str + "_size_stats.log");
         if (!out.is_open()) {
             std::cerr << "Failed to open file." << std::endl;
             return;
@@ -1022,18 +1023,15 @@ private:
                 const long double mid2_key =
                         (static_cast<long double>(keys[mid2_pos]) + static_cast<long double>(keys[mid2_pos + 1])) / 2;
 
-                node->num_items = size * static_cast<int>(BUILD_GAP_CNT + 1);
-                const double mid1_target = mid1_pos * static_cast<int>(BUILD_GAP_CNT + 1) + static_cast<int>(BUILD_GAP_CNT + 1) / 2;
-                const double mid2_target = mid2_pos * static_cast<int>(BUILD_GAP_CNT + 1) + static_cast<int>(BUILD_GAP_CNT + 1) / 2;
+                node->num_items = std::min(size * static_cast<int>(BUILD_GAP_CNT + 1), MAX_NODE_SLOTS);
+                const double scale = static_cast<double>(node->num_items - 1) / static_cast<double>(size - 1);
+                const double mid1_target = mid1_pos * scale;
+                const double mid2_target = mid2_pos * scale;
 
                 node->model.a = (mid2_target - mid1_target) / (mid2_key - mid1_key);
                 node->model.b = mid1_target - node->model.a * mid1_key;
                 RT_ASSERT(isfinite(node->model.a));
                 RT_ASSERT(isfinite(node->model.b));
-
-                const int lr_remains = static_cast<int>(size * BUILD_LR_REMAIN);
-                node->model.b += lr_remains;
-                node->num_items += lr_remains * 2;
 
                 if (size > 1e6) {
                     node->fixed = 1;
@@ -1127,7 +1125,7 @@ private:
                 // So we added a small number (1e-6) to U_T.
                 // In fact, it has only a negligible impact of the performance.
                 {
-                    const int L = size * static_cast<int>(BUILD_GAP_CNT + 1);
+                    const int L = std::min(size * static_cast<int>(BUILD_GAP_CNT + 1), MAX_NODE_SLOTS);
                     int i = 0;
                     int D = 1;
                     RT_ASSERT(D <= size-1-D);
@@ -1170,9 +1168,10 @@ private:
                         const long double mid2_key = (static_cast<long double>(keys[mid2_pos]) +
                                                       static_cast<long double>(keys[mid2_pos + 1])) / 2;
 
-                        node->num_items = size * static_cast<int>(BUILD_GAP_CNT + 1);
-                        const double mid1_target = mid1_pos * static_cast<int>(BUILD_GAP_CNT + 1) + static_cast<int>(BUILD_GAP_CNT + 1) / 2;
-                        const double mid2_target = mid2_pos * static_cast<int>(BUILD_GAP_CNT + 1) + static_cast<int>(BUILD_GAP_CNT + 1) / 2;
+                        node->num_items = std::min(size * static_cast<int>(BUILD_GAP_CNT + 1), MAX_NODE_SLOTS);
+                        const double scale = static_cast<double>(node->num_items - 1) / static_cast<double>(size - 1);
+                        const double mid1_target = mid1_pos * scale;
+                        const double mid2_target = mid2_pos * scale;
 
                         node->model.a = (mid2_target - mid1_target) / (mid2_key - mid1_key);
                         node->model.b = mid1_target - node->model.a * mid1_key;
@@ -1181,9 +1180,6 @@ private:
                     }
                 }
                 RT_ASSERT(node->model.a >= 0);
-                const int lr_remains = static_cast<int>(size * BUILD_LR_REMAIN);
-                node->model.b += lr_remains;
-                node->num_items += lr_remains * 2;
 
                 if (size > 1e6) {
                     node->fixed = 1;

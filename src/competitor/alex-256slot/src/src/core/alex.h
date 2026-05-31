@@ -691,12 +691,12 @@ class Alex {
     // csv format
     AlexNode<T, P>* cur_root = root_node_;
     if (cur_root != nullptr) {
-      std::ifstream in("alex_insert_root.log");
+      std::ifstream in("alex_256slot_insert_root.log");
       if (!in.is_open()) {
-        std::ofstream out("alex_insert_root.log");
+        std::ofstream out("alex_256slot_insert_root.log");
         out << "num_inserts,model_slope,model_intercept,num_slots" << std::endl;
       }
-      std::ofstream out("alex_insert_root.log", std::ios::app);
+      std::ofstream out("alex_256slot_insert_root.log", std::ios::app);
       out << stats_.num_inserts << "," 
           << cur_root->model_.a_ << ","
           << cur_root->model_.b_ << ","
@@ -705,7 +705,7 @@ class Alex {
     // binary format
     // AlexNode<T, P>* cur_root = root_node_;
     // if (cur_root != nullptr) {
-    //   std::ofstream out("alex_insert_root.log", std::ios::binary | std::ios::app);
+    //   std::ofstream out("alex_256slot_insert_root.log", std::ios::binary | std::ios::app);
     //   out.write(reinterpret_cast<const char*>(&stats_.num_inserts), sizeof(stats_.num_inserts));
     //   out.write(reinterpret_cast<const char*>(&cur_root->model_.a_), sizeof(cur_root->model_.a_));
     //   out.write(reinterpret_cast<const char*>(&cur_root->model_.b_), sizeof(cur_root->model_.b_));
@@ -1304,12 +1304,12 @@ class Alex {
     // csv format
     AlexNode<T, P>* cur_root = root_node_;
     if (cur_root != last_root) {
-      std::ifstream in("alex_insert_root.log");
+      std::ifstream in("alex_256slot_insert_root.log");
       if (!in.is_open()) {
-        std::ofstream out("alex_insert_root.log");
+        std::ofstream out("alex_256slot_insert_root.log");
         out << "num_inserts,model_slope,model_intercept,num_slots" << std::endl;
       }
-      std::ofstream out("alex_insert_root.log", std::ios::app);
+      std::ofstream out("alex_256slot_insert_root.log", std::ios::app);
       out << stats_.num_inserts << "," 
           << cur_root->model_.a_ << ","
           << cur_root->model_.b_ << ","
@@ -1318,7 +1318,7 @@ class Alex {
     // binary format
     // AlexNode<T, P>* cur_root = root_node_;
     // if (cur_root != last_root) {
-    //   std::ofstream out("alex_insert_root.log", std::ios::binary | std::ios::app);
+    //   std::ofstream out("alex_256slot_insert_root.log", std::ios::binary | std::ios::app);
     //   out.write(reinterpret_cast<const char*>(&stats_.num_inserts), sizeof(stats_.num_inserts));
     //   out.write(reinterpret_cast<const char*>(&cur_root->model_.a_), sizeof(cur_root->model_.a_));
     //   out.write(reinterpret_cast<const char*>(&cur_root->model_.b_), sizeof(cur_root->model_.b_));
@@ -2508,7 +2508,7 @@ class Alex {
       }
     }
 
-    std::ofstream out_dist("alex_" + s + "_depth_distribution.log");
+    std::ofstream out_dist("alex_256slot_" + s + "_depth_distribution.log");
     if (!out_dist.is_open()) {
         std::cerr << "Failed to open file." << std::endl;
         return ;
@@ -2520,7 +2520,7 @@ class Alex {
     out_dist.close();
   }
   // get tree depth
-  size_t get_alex_depth() const {
+  size_t get_alex_256slot_depth() const {
     if (root_node_ == nullptr) {
       return 0;
     }
@@ -2561,7 +2561,7 @@ class Alex {
   }
 
   void print_model_stats(std::string s) const {
-    std::ofstream out_file("alex_" + s + "_model_stats.log");
+    std::ofstream out_file("alex_256slot_" + s + "_model_stats.log");
     if (!out_file.is_open()) {
         std::cerr << "Failed to open file." << std::endl;
         return ;
@@ -2600,7 +2600,7 @@ class Alex {
   }
 
   void print_hist_model_stats(std::string s) {
-    std::ofstream out_file("alex_" + s + "_hist_model_stats.log");
+    std::ofstream out_file("alex_256slot_" + s + "_hist_model_stats.log");
     if (!out_file.is_open()) {
         std::cerr << "Failed to open file." << std::endl;
         return ;
@@ -2650,7 +2650,7 @@ class Alex {
   void print_information_gain(std::string s) {
     std::unordered_map<int, std::vector<int>> hist;
     std::unordered_map<int, std::vector<int>> leaf_hist;
-    std::ofstream hist_out_file("alex_" + s + "_hist.log");
+    std::ofstream hist_out_file("alex_256slot_" + s + "_hist.log");
     if (!hist_out_file.is_open()) {
         std::cerr << "Failed to open file." << std::endl;
         return ;
@@ -2749,7 +2749,7 @@ class Alex {
   }
 
   void print_node_size(std::string s) {
-    std::ofstream out_file("alex_" + s + "_node_size.log");
+    std::ofstream out_file("alex_256slot_" + s + "_node_size.log");
     if (!out_file.is_open()) {
         std::cerr << "Failed to open file." << std::endl;
         return ;
@@ -2832,7 +2832,7 @@ class Alex {
       }
     }
 
-    std::ofstream out("alex_" + s + "_size_stats.log");
+    std::ofstream out("alex_256slot_" + s + "_size_stats.log");
     if (!out.is_open()) {
         std::cerr << "Failed to open file." << std::endl;
         return;
@@ -2848,7 +2848,7 @@ class Alex {
   }
 
   void print_level_model_stats(std::string s) const {
-    std::ofstream out_file("alex_" + s + "_level_model_stats.log");
+    std::ofstream out_file("alex_256slot_" + s + "_level_model_stats.log");
     if (!out_file.is_open()) {
         std::cerr << "Failed to open file." << std::endl;
         return ;
@@ -2958,7 +2958,7 @@ class Alex {
   }
 
   void print_smo_stats(std::string s) {
-    std::ofstream out("alex_" + s + "_smo_stats.log");
+    std::ofstream out("alex_256slot_" + s + "_smo_stats.log");
     if (!out.is_open()) {
       std::cerr << "Failed to open file." << std::endl;
       return;
@@ -2974,7 +2974,7 @@ class Alex {
   }
 
   void print_memory_exception(std::string s) {
-    std::ofstream out("alex_" + s + "_memory_exception.log");
+    std::ofstream out("alex_256slot_" + s + "_memory_exception.log");
     if (!out.is_open()) {
         std::cerr << "Failed to open file." << std::endl;
         return;
@@ -3020,7 +3020,7 @@ class Alex {
 
 void print_smo_affected_items(std::string s) {
 #ifdef PROFILING
-    std::ofstream out("alex_" + s + "_smo_affected_items.log");
+    std::ofstream out("alex_256slot_" + s + "_smo_affected_items.log");
     if (!out.is_open()) {
         std::cerr << "Failed to open file." << std::endl;
         return;
