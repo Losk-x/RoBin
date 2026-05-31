@@ -135,16 +135,89 @@ Each record should include:
 
 Do not treat a substantial optimization or experiment as complete until its record exists.
 
-## Worktree and branch discipline
+## Git, GitHub, branch, and worktree discipline
 
-For nontrivial experiments or load-bearing changes, use a feature branch or worktree. Before creating in-repo worktrees, ensure `.worktrees/` is ignored; add it to `.gitignore` if needed.
+All nontrivial changes should flow through a feature branch and pull request. Use the current task branch as the PR base unless the user specifies another base; for this repository, `refactor` is the active integration branch for refactor/workflow updates.
+
+Prefer temporary worktrees for independent experiments, benchmark variants, or load-bearing changes that need a clean comparison point. Before creating in-repo worktrees, ensure `.worktrees/` is ignored; add it to `.gitignore` if needed.
 
 Recommended names:
 
 - Branch: `<type>/<scope>-<description>`
 - Worktree: `.worktrees/<scope>-<description>`
 
-Do not benchmark unrelated local edits as decision-grade evidence.
+Use names that encode the affected module or experiment variable. Examples: `fix/benchmark-scan-boundary`, `perf/alex-bulkload-layout`, `docs/agents-git-workflow`.
+
+Use worktrees because they:
+
+- isolate independent experiments and review branches;
+- keep the integration branch clean for comparison and rebasing;
+- avoid `git stash` juggling;
+- give each branch its own build artifacts.
+
+Do not treat dirty-worktree benchmark results as decision-grade evidence. Benchmark committed snapshots when results may influence conclusions.
+
+Before committing or opening a PR:
+
+1. Inspect `git status --short --branch` and preserve unrelated user changes.
+2. Stage only files that belong to the task.
+3. Verify generated datasets, local build outputs, perf data, temporary logs, and ad-hoc CSVs are not staged unless explicitly requested.
+4. Record build, correctness, benchmark, and artifact evidence in the handoff or change record.
+
+## Pull request and review flow
+
+Agents may create branches, commits, and pull requests when asked, but should not merge their own PRs unless the project explicitly allows it.
+
+Once a branch has been pushed or a PR has been opened, preserve review history by adding follow-up commits for fixes. Do not amend or force-push over reviewer-visible history. Reviewers should be able to compare the initial proposal, each review response, and the final state.
+
+PR descriptions should help reviewers reason about the change, not just list files. Use this structure unless a narrower repository template exists:
+
+```markdown
+## Task Description
+<!-- Original task or requirement -->
+
+## What Changed
+<!-- What changed at the behavior/design level -->
+
+## Key Design Decisions
+- Decision 1: ... because ...
+- Decision 2: ... because ...
+
+## Alternatives Considered
+<!-- Plausible options that were rejected and why -->
+
+## Test Coverage
+- [ ] Unit tests added/updated
+- [ ] Integration tests added/updated
+- [ ] Manual testing performed: <description>
+
+## Known Limitations / Follow-up Tasks
+<!-- Current limitations, if any -->
+
+## Review Guidance
+<!-- Where reviewers should focus -->
+```
+
+For review feedback, prefer small follow-up commits with traceable messages. Rebase or squash only before reviewer-visible history exists, or when the repository maintainer explicitly requests it.
+
+## Commit message convention
+
+Use a conventional, traceable commit format:
+
+```text
+<type>(<scope>): <imperative summary>
+
+<body: background and motivation for this change>
+
+Agent-Task: <original task description or task ID>
+Agent-Model: <model used, if applicable>
+Agent-Decision: <key design decisions and rationale>
+Agent-Limitation: <known limitations or "none">
+```
+
+Common types: `feat`, `fix`, `refactor`, `perf`, `docs`, `test`, `ci`, `chore`.
+
+Use a scope that names the affected module or workflow area. Multi-scope commits should be rare; when needed, separate scopes with `/`.
 
 ## C++ style and implementation guidance
 
