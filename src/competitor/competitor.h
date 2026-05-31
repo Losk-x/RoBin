@@ -14,6 +14,8 @@ indexInterface<KEY_TYPE, PAYLOAD_TYPE> *get_index(std::string index_type,
   } else {
     if (index_type == "alex") {
       index = new alexInterface<KEY_TYPE, PAYLOAD_TYPE>;
+    } else if (index_type == "alex-256slot") {
+      index = new alex256SlotInterface<KEY_TYPE, PAYLOAD_TYPE>;
     } else if (index_type == "pgm") {
       index = new pgmInterface<KEY_TYPE, PAYLOAD_TYPE>;
     } else if (index_type == "btree") {
@@ -22,6 +24,8 @@ indexInterface<KEY_TYPE, PAYLOAD_TYPE> *get_index(std::string index_type,
       index = new ARTInterface<KEY_TYPE, PAYLOAD_TYPE>;
     } else if (index_type == "lipp") {
       index = new LIPPInterface<KEY_TYPE, PAYLOAD_TYPE>;
+    } else if (index_type == "lipp-256slot") {
+      index = new LIPP256SlotInterface<KEY_TYPE, PAYLOAD_TYPE>;
     } else if (index_type == "dytis") {
       index = new dytisInterface<KEY_TYPE, PAYLOAD_TYPE>;
     } else if (index_type == "dili") {
