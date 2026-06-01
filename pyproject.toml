@@ -1,0 +1,20 @@
+[project]
+name = "robin"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.2.6",
+]
+
+[project.optional-dependencies]
+notebook = [
+    "ipykernel>=7.2.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.9",
+    "pandas>=2.3.3",
+    "scipy>=1.15.3",
+    "seaborn>=0.13.2",
+]
+
+[tool.uv]
+package = false

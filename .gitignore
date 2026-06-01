@@ -5,6 +5,7 @@ build/*
 resources
 resources/*
 out.csv
+.worktrees/
 *.csv
 # result
 # result/*
@@ -315,6 +316,8 @@ paket-files/
 
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
+.venv/
+.ipynb_checkpoints/
 *.pyc
 
 # Cake - Uncomment if you are using it

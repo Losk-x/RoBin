@@ -18,9 +18,10 @@ Robin is a **Ro**bustness **B**enchmark for range **in**dexes (especially for up
 
 ## Reproduce Step
 
-If you want to go faster, you can just run the following script to install the dependencies download the dataset and build the project:
+If you want to go faster, install the locked Python helper dependency first, then run the convenience script to download datasets and build the project:
 
 ```shell
+uv sync
 bash prepare.sh
 ```
 
@@ -38,11 +39,24 @@ If the repository is not cloned with the `--recursive` option, you can run the f
 git submodule update --init --recursive
 ```
 
+Create the isolated Python environment used by dataset helpers:
+```shell
+uv sync
+```
+This installs the Python dependencies recorded in `pyproject.toml` and `uv.lock` into `.venv/` without modifying the system Python installation. The default environment only installs the dataset helper dependency (`numpy`). The C++ build dependencies above are still system packages and are not managed by `uv`.
+
+
 Download the dataset from remote and construct **linear** and **fb-1**:
 ```shell
 cd datasets
 bash download.sh
-python3 gen_linear_fb-1.py
+uv run --project .. python gen_linear_fb-1.py
+cd ..
+```
+
+For notebook analysis, install the optional notebook dependencies:
+```shell
+uv sync --extra notebook
 ```
 
 ### Build
@@ -55,7 +69,7 @@ make -j
 ```
 or just run the following script:
 ```shell
-bash build.sh
+bash build.sh release
 ```
 
 ### Reproduce
@@ -67,13 +81,28 @@ Benchmark all the competitors via RoBin with the following command:
 bash reproduce.sh
 ```
 
-The results will be stored in the `results` directory.
+The results will be stored in the `result` directory.
+Use the default locked environment for command-line reproduction:
+
+For a reproducible Python environment on a new machine, run:
+```shell
+uv sync
+```
+This recreates the locked `.venv/` from `uv.lock`. To run a single benchmark through the same environment:
+```shell
+export numanode=0
+uv run python run.py --index=btree --dataset=linear --concurrency=1 --sampling_method=uniform --bulkload_size=0 --insert_pattern=sorted --taskset=1-1
+```
+
+Install the optional notebook environment before plotting:
+```shell
+uv sync --extra notebook
+```
 
 Using the jupyter notebook to plot the results:
 ```shell
-cd results
-# open and run the following jupyter notebook to reproduce the figure in our paper
-# such as single_thread.ipynb and etc.
+uv run --extra notebook jupyter notebook
+# open result/single_thread.ipynb or another notebook and select the project kernel
 ```
 
 ### Profiling
@@ -110,12 +139,24 @@ mkdir -p fig
 ## analysis_smo.ipynb
 ```
 
+Or start Jupyter from the repository root after installing the notebook extra:
+```shell
+uv sync --extra notebook
+uv run --extra notebook jupyter notebook
+# open profiling_result/analysis_depth.ipynb or another profiling notebook
+```
+
+Register the project environment as a named Jupyter kernel if your notebook UI does not discover it automatically:
+```shell
+uv run --extra notebook python -m ipykernel install --user --name robin --display-name "RoBin"
+```
+
 
 ### Run and Play
 We also provide a script to run the RoBin with custom parameters. You can run the following command to see the help information:
 
 ```shell
-python3 run.py --help
+uv run python run.py --help
 ```
 
 
