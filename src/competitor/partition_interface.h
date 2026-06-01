@@ -1,5 +1,6 @@
 #include "../benchmark/binary_search.h"
 #include "./alex/alex.h"
+#include "./alex-256slot/alex.h"
 #include "./alexolc/alexolc.h"
 #include "./art/art.h"
 #include "./artolc/artolc.h"
@@ -10,6 +11,7 @@
 #include "./findex/finedex.h"
 #include "./indexInterface.h"
 #include "./lipp/lipp.h"
+#include "./lipp-256slot/lipp.h"
 #include "./pgm/pgm.h"
 #include "./sali/sali.h"
 #include "./xindex/xindex.h"
@@ -56,6 +58,10 @@ public:
       for (size_t i = 0; i < partition_num; i++) {
         index_[i] = new alexInterface<KEY_TYPE, PAYLOAD_TYPE>;
       }
+    } else if (index_type == "alex-256slot") {
+      for (size_t i = 0; i < partition_num; i++) {
+        index_[i] = new alex256SlotInterface<KEY_TYPE, PAYLOAD_TYPE>;
+      }
     } else if (index_type == "btree") {
       for (size_t i = 0; i < partition_num; i++) {
         index_[i] = new BTreeInterface<KEY_TYPE, PAYLOAD_TYPE>;
@@ -67,6 +73,10 @@ public:
     } else if (index_type == "lipp") {
       for (size_t i = 0; i < partition_num; i++) {
         index_[i] = new LIPPInterface<KEY_TYPE, PAYLOAD_TYPE>;
+      }
+    } else if (index_type == "lipp-256slot") {
+      for (size_t i = 0; i < partition_num; i++) {
+        index_[i] = new LIPP256SlotInterface<KEY_TYPE, PAYLOAD_TYPE>;
       }
     } else if (index_type == "dili") {
       for (size_t i = 0; i < partition_num; i++) {
