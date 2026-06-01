@@ -1,0 +1,3902 @@
+start=2026-06-01 08:28:09
+config=single-thread, memory collection enabled, tail latency sampling disabled, uniform sampling, 100M bulkload, shuffled insert, repeats=3
+
+## 1/60 dataset=linear index=art repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=art
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = art
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 8046173154 ns
+Begin running
+Finish running
+Total time: 44976807052 ns
+Throughput = 2223368
+Memory: 4812554520
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 77838112849 ns
+Throughput = 2569435
+Memory: 4812554520
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 2/60 dataset=linear index=art repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=art
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = art
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 8151172740 ns
+Begin running
+Finish running
+Total time: 42949750788 ns
+Throughput = 2328302
+Memory: 4812554520
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 73171261183 ns
+Throughput = 2733313
+Memory: 4812554520
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 3/60 dataset=linear index=art repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=art
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = art
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 8037341190 ns
+Begin running
+Finish running
+Total time: 44476135925 ns
+Throughput = 2248396
+Memory: 4812554520
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 73822251128 ns
+Throughput = 2709210
+Memory: 4812554520
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 4/60 dataset=linear index=alex repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=alex
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 13106740966 ns
+Begin running
+Finish running
+Total time: 39396359925 ns
+Throughput = 2538305
+Memory: 4095318376
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 27307235461 ns
+Throughput = 7324066
+Memory: 4095318376
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 5/60 dataset=linear index=alex repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=alex
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 12857933928 ns
+Begin running
+Finish running
+Total time: 39093567812 ns
+Throughput = 2557965
+Memory: 4095318376
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 27761387967 ns
+Throughput = 7204250
+Memory: 4095318376
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 6/60 dataset=linear index=alex repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=alex
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 12948845425 ns
+Begin running
+Finish running
+Total time: 39233299608 ns
+Throughput = 2548855
+Memory: 4095318376
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 27292861238 ns
+Throughput = 7327923
+Memory: 4095318376
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 7/60 dataset=linear index=lipp repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=lipp
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 3774310644 ns
+Begin running
+Finish running
+Total time: 11040193880 ns
+Throughput = 9057811
+Memory: 3200044168
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 18176495802 ns
+Throughput = 11003220
+Memory: 3200044168
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 8/60 dataset=linear index=lipp repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=lipp
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 3876588303 ns
+Begin running
+Finish running
+Total time: 11141383477 ns
+Throughput = 8975546
+Memory: 3200044168
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 18428507248 ns
+Throughput = 10852750
+Memory: 3200044168
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 9/60 dataset=linear index=lipp repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=lipp
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 3814192784 ns
+Begin running
+Finish running
+Total time: 11187989280 ns
+Throughput = 8938156
+Memory: 3200044168
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 18316030147 ns
+Throughput = 10919396
+Memory: 3200044168
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 10/60 dataset=linear index=alex-256slot repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=alex-256slot
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 13666839305 ns
+Begin running
+Finish running
+Total time: 118280512724 ns
+Throughput = 845447
+Memory: 5002289104
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 173495936613 ns
+Throughput = 1152764
+Memory: 5002289104
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 11/60 dataset=linear index=alex-256slot repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=alex-256slot
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 13498622375 ns
+Begin running
+Finish running
+Total time: 118804806058 ns
+Throughput = 841716
+Memory: 5002289104
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 177052635066 ns
+Throughput = 1129607
+Memory: 5002289104
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 12/60 dataset=linear index=alex-256slot repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=alex-256slot
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 13814167716 ns
+Begin running
+Finish running
+Total time: 119368170098 ns
+Throughput = 837744
+Memory: 5002289104
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 173823185261 ns
+Throughput = 1150594
+Memory: 5002289104
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 13/60 dataset=linear index=lipp-256slot repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=lipp-256slot
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 12064235899 ns
+Begin running
+Finish running
+Total time: 176622896013 ns
+Throughput = 566178
+Memory: 20558652800
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 122269089621 ns
+Throughput = 1635736
+Memory: 20558652800
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 14/60 dataset=linear index=lipp-256slot repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=lipp-256slot
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 12472083638 ns
+Begin running
+Finish running
+Total time: 176899374843 ns
+Throughput = 565293
+Memory: 20558652800
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 129116981690 ns
+Throughput = 1548982
+Memory: 20558652800
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 15/60 dataset=linear index=lipp-256slot repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/linear --index=lipp-256slot
+keys_file = datasets/linear
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/linear
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 12702439702 ns
+Begin running
+Finish running
+Total time: 176638899494 ns
+Throughput = 566126
+Memory: 20558652800
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 124710130701 ns
+Throughput = 1603718
+Memory: 20558652800
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 16/60 dataset=covid index=art repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=art
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = art
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 8763794827 ns
+Begin running
+Finish running
+Total time: 65779602100 ns
+Throughput = 1520228
+Memory: 8406155724
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 112910947352 ns
+Throughput = 1771307
+Memory: 8406155724
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 17/60 dataset=covid index=art repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=art
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = art
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 8730153719 ns
+Begin running
+Finish running
+Total time: 66954864087 ns
+Throughput = 1493543
+Memory: 8406155724
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 113566508828 ns
+Throughput = 1761082
+Memory: 8406155724
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 18/60 dataset=covid index=art repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=art
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = art
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 8741756722 ns
+Begin running
+Finish running
+Total time: 65226947040 ns
+Throughput = 1533108
+Memory: 8406155724
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 112150464370 ns
+Throughput = 1783318
+Memory: 8406155724
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 19/60 dataset=covid index=alex repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=alex
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 31702922863 ns
+Begin running
+Finish running
+Total time: 56883155965 ns
+Throughput = 1757989
+Memory: 4112771952
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 43020629077 ns
+Throughput = 4648932
+Memory: 4112771952
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 20/60 dataset=covid index=alex repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=alex
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 31666037097 ns
+Begin running
+Finish running
+Total time: 56806992569 ns
+Throughput = 1760346
+Memory: 4112771952
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 41205439018 ns
+Throughput = 4853728
+Memory: 4112771952
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 21/60 dataset=covid index=alex repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=alex
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 31490210383 ns
+Begin running
+Finish running
+Total time: 57372640953 ns
+Throughput = 1742991
+Memory: 4112771952
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 40929968090 ns
+Throughput = 4886395
+Memory: 4112771952
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 22/60 dataset=covid index=lipp repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=lipp
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 8972025737 ns
+Begin running
+Finish running
+Total time: 43766191294 ns
+Throughput = 2284868
+Memory: 18008377834
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 68504608015 ns
+Throughput = 2919511
+Memory: 18008377834
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 23/60 dataset=covid index=lipp repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=lipp
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 8945078193 ns
+Begin running
+Finish running
+Total time: 43381831468 ns
+Throughput = 2305112
+Memory: 18008377834
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 68559371424 ns
+Throughput = 2917179
+Memory: 18008377834
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 24/60 dataset=covid index=lipp repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=lipp
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 8984061771 ns
+Begin running
+Finish running
+Total time: 43691737813 ns
+Throughput = 2288762
+Memory: 18008377834
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 68676623488 ns
+Throughput = 2912199
+Memory: 18008377834
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 25/60 dataset=covid index=alex-256slot repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=alex-256slot
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 37437105746 ns
+Begin running
+Finish running
+Total time: 125258213006 ns
+Throughput = 798350
+Memory: 4991947496
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 172110928270 ns
+Throughput = 1162041
+Memory: 4991947496
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 26/60 dataset=covid index=alex-256slot repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=alex-256slot
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 37789696429 ns
+Begin running
+Finish running
+Total time: 126126816993 ns
+Throughput = 792852
+Memory: 4991947496
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 172033348106 ns
+Throughput = 1162565
+Memory: 4991947496
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 27/60 dataset=covid index=alex-256slot repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=alex-256slot
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 37620449037 ns
+Begin running
+Finish running
+Total time: 125537204356 ns
+Throughput = 796576
+Memory: 4991947496
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 171274462682 ns
+Throughput = 1167716
+Memory: 4991947496
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 28/60 dataset=covid index=lipp-256slot repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=lipp-256slot
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 16796379742 ns
+Begin running
+Finish running
+Total time: 218482027623 ns
+Throughput = 457703
+Memory: 31087332110
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 176865540212 ns
+Throughput = 1130802
+Memory: 31087332110
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 29/60 dataset=covid index=lipp-256slot repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=lipp-256slot
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 16902655368 ns
+Begin running
+Finish running
+Total time: 218538160655 ns
+Throughput = 457585
+Memory: 31087332110
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 177202438729 ns
+Throughput = 1128652
+Memory: 31087332110
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 30/60 dataset=covid index=lipp-256slot repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/covid --index=lipp-256slot
+keys_file = datasets/covid
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/covid
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 16935823408 ns
+Begin running
+Finish running
+Total time: 224102012867 ns
+Throughput = 446225
+Memory: 31087332110
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 182878267456 ns
+Throughput = 1093623
+Memory: 31087332110
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 31/60 dataset=fb-1 index=art repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=art
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = art
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 9976060116 ns
+Begin running
+Finish running
+Total time: 86329564508 ns
+Throughput = 1158351
+Memory: 10515798544
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 204554470039 ns
+Throughput = 977734
+Memory: 10515798544
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 32/60 dataset=fb-1 index=art repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=art
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = art
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 10077833941 ns
+Begin running
+Finish running
+Total time: 86382547008 ns
+Throughput = 1157641
+Memory: 10515798544
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 204692553464 ns
+Throughput = 977075
+Memory: 10515798544
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 33/60 dataset=fb-1 index=art repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=art
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = art
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 9999490524 ns
+Begin running
+Finish running
+Total time: 86551971049 ns
+Throughput = 1155375
+Memory: 10515798544
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 203898900862 ns
+Throughput = 980878
+Memory: 10515798544
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 34/60 dataset=fb-1 index=alex repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=alex
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 62455646440 ns
+Begin running
+Finish running
+Total time: 139206348992 ns
+Throughput = 718358
+Memory: 4752522648
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 169033423699 ns
+Throughput = 1183197
+Memory: 4752522648
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 35/60 dataset=fb-1 index=alex repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=alex
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 63672071843 ns
+Begin running
+Finish running
+Total time: 138910497149 ns
+Throughput = 719888
+Memory: 4752522648
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 168757781384 ns
+Throughput = 1185130
+Memory: 4752522648
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 36/60 dataset=fb-1 index=alex repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=alex
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 64391577090 ns
+Begin running
+Finish running
+Total time: 139092152744 ns
+Throughput = 718947
+Memory: 4752522648
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 169390655356 ns
+Throughput = 1180702
+Memory: 4752522648
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 37/60 dataset=fb-1 index=lipp repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=lipp
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 11717414195 ns
+Begin running
+Finish running
+Total time: 94431356477 ns
+Throughput = 1058970
+Memory: 20960529840
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 104165096533 ns
+Throughput = 1920028
+Memory: 20960529840
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 38/60 dataset=fb-1 index=lipp repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=lipp
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 11716769455 ns
+Begin running
+Finish running
+Total time: 94280381597 ns
+Throughput = 1060666
+Memory: 20960529840
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 104701388584 ns
+Throughput = 1910194
+Memory: 20960529840
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 39/60 dataset=fb-1 index=lipp repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=lipp
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 11540412962 ns
+Begin running
+Finish running
+Total time: 94090973176 ns
+Throughput = 1062801
+Memory: 20960529840
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 104485307427 ns
+Throughput = 1914144
+Memory: 20960529840
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 40/60 dataset=fb-1 index=alex-256slot repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=alex-256slot
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 42970511485 ns
+Begin running
+Finish running
+Total time: 192971816566 ns
+Throughput = 518210
+Memory: 5334462992
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 296008937474 ns
+Throughput = 675655
+Memory: 5334462992
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 41/60 dataset=fb-1 index=alex-256slot repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=alex-256slot
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 42811087190 ns
+Begin running
+Finish running
+Total time: 193847765212 ns
+Throughput = 515868
+Memory: 5334462992
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 295627515212 ns
+Throughput = 676527
+Memory: 5334462992
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 42/60 dataset=fb-1 index=alex-256slot repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=alex-256slot
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 42969299376 ns
+Begin running
+Finish running
+Total time: 191919471621 ns
+Throughput = 521051
+Memory: 5334462992
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 297512057588 ns
+Throughput = 672241
+Memory: 5334462992
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 43/60 dataset=fb-1 index=lipp-256slot repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=lipp-256slot
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 13641527446 ns
+Begin running
+Finish running
+Total time: 215314348639 ns
+Throughput = 464437
+Memory: 25108786850
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 172210770870 ns
+Throughput = 1161367
+Memory: 25108786850
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 44/60 dataset=fb-1 index=lipp-256slot repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=lipp-256slot
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 13765695091 ns
+Begin running
+Finish running
+Total time: 216486352174 ns
+Throughput = 461922
+Memory: 25108786850
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 175233467563 ns
+Throughput = 1141334
+Memory: 25108786850
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 45/60 dataset=fb-1 index=lipp-256slot repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/fb-1 --index=lipp-256slot
+keys_file = datasets/fb-1
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/fb-1
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 13835519499 ns
+Begin running
+Finish running
+Total time: 215702511622 ns
+Throughput = 463601
+Memory: 25108786850
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 175007438765 ns
+Throughput = 1142808
+Memory: 25108786850
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 46/60 dataset=osm index=art repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=art
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = art
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 9225915320 ns
+Begin running
+Finish running
+Total time: 77807533038 ns
+Throughput = 1285222
+Memory: 10219960820
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 145068452225 ns
+Throughput = 1378659
+Memory: 10219960820
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 47/60 dataset=osm index=art repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=art
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = art
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 8904797563 ns
+Begin running
+Finish running
+Total time: 72104898872 ns
+Throughput = 1386868
+Memory: 10219960820
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 131231437316 ns
+Throughput = 1524025
+Memory: 10219960820
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 48/60 dataset=osm index=art repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=art
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = art
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 8795971566 ns
+Begin running
+Finish running
+Total time: 67318421993 ns
+Throughput = 1485477
+Memory: 10219960820
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 112287136537 ns
+Throughput = 1781147
+Memory: 10219960820
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 49/60 dataset=osm index=alex repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=alex
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 46708406640 ns
+Begin running
+Finish running
+Total time: 112402447343 ns
+Throughput = 889660
+Memory: 4581409776
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 108064496826 ns
+Throughput = 1850746
+Memory: 4581409776
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 50/60 dataset=osm index=alex repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=alex
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 45193295446 ns
+Begin running
+Finish running
+Total time: 110853745530 ns
+Throughput = 902089
+Memory: 4581409776
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 105338055193 ns
+Throughput = 1898649
+Memory: 4581409776
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 51/60 dataset=osm index=alex repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=alex
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 44390686747 ns
+Begin running
+Finish running
+Total time: 109399370870 ns
+Throughput = 914082
+Memory: 4581409776
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 113797147264 ns
+Throughput = 1757513
+Memory: 4581409776
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 52/60 dataset=osm index=lipp repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=lipp
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 13079968722 ns
+Begin running
+Finish running
+Total time: 100715787881 ns
+Throughput = 992892
+Memory: 25393258748
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 103285581805 ns
+Throughput = 1936378
+Memory: 25393258748
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 53/60 dataset=osm index=lipp repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=lipp
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 12907424522 ns
+Begin running
+Finish running
+Total time: 100282802260 ns
+Throughput = 997179
+Memory: 25393258748
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 98718948027 ns
+Throughput = 2025953
+Memory: 25393258748
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 54/60 dataset=osm index=lipp repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=lipp
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 13059263401 ns
+Begin running
+Finish running
+Total time: 93063825330 ns
+Throughput = 1074531
+Memory: 25393258748
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 96706717010 ns
+Throughput = 2068108
+Memory: 25393258748
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 55/60 dataset=osm index=alex-256slot repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=alex-256slot
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 52670661630 ns
+Begin running
+Finish running
+Total time: 151895403608 ns
+Throughput = 658347
+Memory: 5046116536
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 206171241990 ns
+Throughput = 970067
+Memory: 5046116536
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 56/60 dataset=osm index=alex-256slot repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=alex-256slot
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 52544379269 ns
+Begin running
+Finish running
+Total time: 151391634522 ns
+Throughput = 660538
+Memory: 5046116536
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 206211629659 ns
+Throughput = 969877
+Memory: 5046116536
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 57/60 dataset=osm index=alex-256slot repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=alex-256slot
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = alex-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 52723006099 ns
+Begin running
+Finish running
+Total time: 152291612304 ns
+Throughput = 656634
+Memory: 5046116536
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 206070015751 ns
+Throughput = 970543
+Memory: 5046116536
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 58/60 dataset=osm index=lipp-256slot repeat=1
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=lipp-256slot
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 14115793427 ns
+Begin running
+Finish running
+Total time: 177598212803 ns
+Throughput = 563068
+Memory: 26069453278
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 157319701759 ns
+Throughput = 1271296
+Memory: 26069453278
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 59/60 dataset=osm index=lipp-256slot repeat=2
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=lipp-256slot
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 14127431234 ns
+Begin running
+Finish running
+Total time: 177537642857 ns
+Throughput = 563260
+Memory: 26069453278
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 153853745760 ns
+Throughput = 1299935
+Memory: 26069453278
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+
+## 60/60 dataset=osm index=lipp-256slot repeat=3
+$ numactl --cpunodebind=0 --membind=0 taskset -c 1 /root/myspace/RoBin/.worktrees/add-256slot-competitors/build/microbench --keys_file_type=binary --read=0.0 --insert=0.0 --update=0.0 --scan=0.0 --delete=0.0 --test_suite=22 --operations_num=0 --table_size=-1 --init_table_ratio=0.5 --del_table_ratio=0.0 --thread_num=1 --preload_suite=0 --memory --output_path=/root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv --keys_file=datasets/osm --index=lipp-256slot
+keys_file = datasets/osm
+backup_keys_file = 
+keys_file_type = binary
+read = 0.0
+insert = 0.0
+delete = 0.0
+update = 0.0
+scan = 0.0
+scan_num = 100
+operations_num = 0
+partition_num = 1
+table_size = -1
+init_table_ratio = 0.5
+del_table_ratio = 0.0
+sample_round = 50000000
+thread_num = 1
+index = lipp-256slot
+sample_distribution = uniform
+latency_sample = 0
+out_of_bound_inject = 0
+latency_sample_ratio = 0.01
+error_bound = 64
+output_path = /root/myspace/RoBin/.worktrees/add-256slot-competitors/result/motivation/motivation_single_thread_uniform_100m_shuffled_raw.csv
+seed = 1866
+memory = 1
+dataset_statistic = 0
+data_shift = 0
+test_suite = 22
+dump_bulkload = 0
+sigma_ratio = 0.5
+zipfian_constant = 0.99
+preload_suite = 0
+partition_method = direct
+[micro] Read:Insert:Update:Scan:Delete= 0:0:0:0:0
+Reading data from file.
+datasets/osm
+200000000
+table_size: 200000000
+table_size: 200000000
+init_keys.size(): 100000000
+bulk loading
+bulk load duration: 14171637582 ns
+Begin running
+Finish running
+Total time: 180419048134 ns
+Throughput = 554265
+Memory: 26069453278
+success_read: 0
+success_insert: 100000000
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
+Begin running
+Finish running
+Total time: 172368043833 ns
+Throughput = 1160307
+Memory: 26069453278
+success_read: 200000000
+success_insert: 0
+success_update: 0
+success_remove: 0
+scan_not_enough: 0
