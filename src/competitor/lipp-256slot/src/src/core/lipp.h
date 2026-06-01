@@ -65,7 +65,6 @@ class LIPP
         bitmap_item -= 1 << BITMAP_NEXT_1(bitmap_item);
     }
 
-    const double BUILD_LR_REMAIN;
     const bool QUIET;
 
     struct {
@@ -87,8 +86,8 @@ class LIPP
 public:
     typedef std::pair<T, P> V;
 
-    LIPP(double BUILD_LR_REMAIN = 0, bool QUIET = true)
-        : BUILD_LR_REMAIN(BUILD_LR_REMAIN), QUIET(QUIET) {
+    LIPP(bool QUIET = true)
+        : QUIET(QUIET) {
         {
             std::vector<Node*> nodes;
             for (int _ = 0; _ < 1e7; _ ++) {

@@ -6,7 +6,7 @@ Measure single-thread throughput with memory collection for ART, ALEX, LIPP, ALE
 
 ## Design
 
-The run used the PR branch `add-256slot-competitors` at commit `056ef0f46167be85c62c804e811f0bb7d2de2c8a` when the tmux job was started. The benchmark executable was the existing Release build in this worktree.
+The benchmark code-under-test was PR branch `add-256slot-competitors` at commit `056ef0f46167be85c62c804e811f0bb7d2de2c8a` when the tmux job was started. The benchmark artifacts and this report were committed afterward in `e77468b` (`Add motivation benchmark results`), so `056ef0f` is the measured code snapshot and `e77468b` is the artifact-record commit.
 
 Configuration:
 
