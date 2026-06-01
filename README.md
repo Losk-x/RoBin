@@ -18,9 +18,10 @@ Robin is a **Ro**bustness **B**enchmark for range **in**dexes (especially for up
 
 ## Reproduce Step
 
-If you want to go faster, you can just run the following script to install the dependencies download the dataset and build the project:
+If you want to go faster, install the locked Python helper dependency first, then run the convenience script to download datasets and build the project:
 
 ```shell
+uv sync
 bash prepare.sh
 ```
 
@@ -80,7 +81,7 @@ Benchmark all the competitors via RoBin with the following command:
 bash reproduce.sh
 ```
 
-The results will be stored in the `results` directory.
+The results will be stored in the `result` directory.
 Use the default locked environment for command-line reproduction:
 
 For a reproducible Python environment on a new machine, run:
@@ -136,6 +137,13 @@ mkdir -p fig
 ## analysis_memory.ipynb
 ## analysis_overfit.ipynb
 ## analysis_smo.ipynb
+```
+
+Or start Jupyter from the repository root after installing the notebook extra:
+```shell
+uv sync --extra notebook
+uv run --extra notebook jupyter notebook
+# open profiling_result/analysis_depth.ipynb or another profiling notebook
 ```
 
 Register the project environment as a named Jupyter kernel if your notebook UI does not discover it automatically:
