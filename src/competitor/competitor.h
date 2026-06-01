@@ -16,6 +16,8 @@ indexInterface<KEY_TYPE, PAYLOAD_TYPE> *get_index(std::string index_type,
       index = new alexInterface<KEY_TYPE, PAYLOAD_TYPE>;
     } else if (index_type == "alex-256slot") {
       index = new alex256SlotInterface<KEY_TYPE, PAYLOAD_TYPE>;
+    } else if (index_type == "alex-256slot-lowlf") {
+      index = new alex256SlotLowLfInterface<KEY_TYPE, PAYLOAD_TYPE>;
     } else if (index_type == "pgm") {
       index = new pgmInterface<KEY_TYPE, PAYLOAD_TYPE>;
     } else if (index_type == "btree") {

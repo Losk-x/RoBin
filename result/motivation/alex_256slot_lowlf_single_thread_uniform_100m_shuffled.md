@@ -1,0 +1,19 @@
+# ALEX-256slot low-load-factor tuning probe
+
+| Dataset | Index | Insert Mops/s | Read Mops/s | Memory GiB | Memory / ART | Target |
+|---|---|---|---|---|---|---|
+| linear | art | 2.257 | 2.578 | 4.482 | 1.000 | baseline |
+| linear | alex-256slot | 0.861 | 1.162 | 4.659 | 1.039 | yes |
+| linear | alex-256slot-lowlf | 0.781 | 1.146 | 6.867 | 1.532 | no |
+| covid | art | 1.547 | 1.778 | 7.829 | 1.000 | baseline |
+| covid | alex-256slot | 0.800 | 1.181 | 4.649 | 0.594 | no |
+| covid | alex-256slot-lowlf | 0.698 | 0.985 | 6.984 | 0.892 | no |
+| fb-1 | art | 1.202 | 1.002 | 9.794 | 1.000 | baseline |
+| fb-1 | alex-256slot | 0.522 | 0.677 | 4.968 | 0.507 | no |
+| fb-1 | alex-256slot-lowlf | 0.479 | 0.607 | 7.305 | 0.746 | no |
+| osm | art | 1.327 | 1.691 | 9.518 | 1.000 | baseline |
+| osm | alex-256slot | 0.654 | 0.965 | 4.700 | 0.494 | no |
+| osm | alex-256slot-lowlf | 0.604 | 0.863 | 7.026 | 0.738 | no |
+
+Target is memory greater than ART and no more than ART * 1.10 for the same dataset.
+This run is a single repeat using the same 100M bulkload / 100M shuffled insert configuration as the motivation benchmark.

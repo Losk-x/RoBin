@@ -15,6 +15,7 @@ def main():
             "art",
             "alex",
             "alex-256slot",
+            "alex-256slot-lowlf",
             "lipp",
             "lipp-256slot",
             "dytis",
