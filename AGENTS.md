@@ -26,6 +26,8 @@ RoBin is a C++17 benchmark harness for robustness experiments on range indexes, 
 - Treat hot paths as allocation-sensitive. Avoid heap allocations, string construction, virtual dispatch changes, extra branches, sorting, copying, or synchronization in per-operation paths unless measured and justified.
 - Keep profiling-only code under the existing `PROFILING` / `ROOT_PROFILING` gates. Normal benchmark builds must not pay profiling overhead.
 - Do not commit generated datasets, local build outputs, perf data, temporary logs, or ad-hoc CSVs unless the task explicitly asks for a checked-in artifact.
+- Identify assumptions and success criteria before implementing. If a request has materially different interpretations, ask for confirmation instead of silently choosing one. If a simpler approach solves the problem, say so before building something heavier.
+- Turn tasks into verifiable goals. "Add validation" means write checks then make them pass. "Fix the bug" means reproduce it with a minimal scenario then fix it. "Refactor X" means verify behavior before and after, then preserve behavior through the change.
 
 ## Build and dependencies
 
@@ -113,7 +115,7 @@ bash run_case_profiling.sh
 - For decision-grade benchmark results, tie results to a specific commit, exact command, environment, dataset, and output path.
 - Keep NUMA binding, thread count, taskset, dataset, bulkload size, sampling method, insert pattern, and index list explicit in records.
 - Preserve existing output columns and meanings unless the task is specifically to change result schema; update all notebooks/scripts that consume changed columns.
-- If a long run is required, start it detached only after short validation is green and record the session name, attach command, and expected output paths.
+- If a long run is required, start it detached (e.g. via `tmux new-session -d -s <session>`) only after short validation is green. Record the session name, attach command, and expected output paths. Verify startup with `tmux capture-pane -pt <session>` before reporting the run as started; do not imply completion until the run finishes.
 
 ## Research records
 
@@ -157,6 +159,13 @@ Use worktrees because they:
 
 Do not treat dirty-worktree benchmark results as decision-grade evidence. Benchmark committed snapshots when results may influence conclusions.
 
+**Worktree lifecycle**: Once a PR is opened from a worktree branch, keep the worktree until the PR is merged or closed. Do not delete the worktree or branch while review is pending — reviewers may request changes that need the same working environment. After the PR is merged or closed, clean up with:
+
+```bash
+git worktree remove .worktrees/<scope>-<description>
+git branch -d <type>/<scope>-<description>
+```
+
 Before committing or opening a PR:
 
 1. Inspect `git status --short --branch` and preserve unrelated user changes.
@@ -169,6 +178,8 @@ Before committing or opening a PR:
 Agents may create branches, commits, and pull requests when asked, but should not merge their own PRs unless the project explicitly allows it.
 
 Once a branch has been pushed or a PR has been opened, preserve review history by adding follow-up commits for fixes. Do not amend or force-push over reviewer-visible history. Reviewers should be able to compare the initial proposal, each review response, and the final state.
+
+While a PR is under review, do not delete the worktree or branch. The working environment must remain available for follow-up commits addressing review feedback. See "Worktree lifecycle" in the Git, GitHub, branch, and worktree discipline section.
 
 PR descriptions should help reviewers reason about the change, not just list files. Use this structure unless a narrower repository template exists:
 
@@ -202,6 +213,29 @@ PR titles and descriptions must be written in English. If the original task is i
 
 For review feedback, prefer small follow-up commits with traceable messages. Rebase or squash only before reviewer-visible history exists, or when the repository maintainer explicitly requests it.
 
+## Development loop
+
+For each code change, follow this ordered workflow:
+
+1. Identify the affected module or subsystem.
+2. Read local instructions and nearby design documentation before editing.
+3. Create or enter a feature branch/worktree for nontrivial work.
+4. Inspect the touched code and existing tests.
+5. Make the minimal code change needed.
+6. Build the affected target.
+7. Run correctness checks that cover the change.
+8. If performance-relevant, run a small benchmark sanity check.
+9. Record commands, outputs, logs, and result locations.
+10. Commit with a traceable message.
+11. For long benchmarks, start them only after the short loop is green.
+
+Think in four layers:
+
+- **Implementation layer**: change the code.
+- **Correctness layer**: prove behavior first.
+- **Performance layer**: run sanity checks before longer campaigns.
+- **Record layer**: leave logs, manifests, and decisions tied to a snapshot.
+
 ## Commit message convention
 
 Use a conventional, traceable commit format:
@@ -220,6 +254,44 @@ Agent-Limitation: <known limitations or "none">
 Common types: `feat`, `fix`, `refactor`, `perf`, `docs`, `test`, `ci`, `chore`.
 
 Use a scope that names the affected module or workflow area. Multi-scope commits should be rare; when needed, separate scopes with `/`.
+
+## Reusable checklists
+
+### Every nontrivial change
+
+1. Identify affected module or subsystem; if unclear, use `reports/project/` or `reports/main/`.
+2. Read local instructions and relevant design notes.
+3. Create or enter a feature branch/worktree.
+4. Create or update the module context file: `reports/<module>/README.md`.
+5. Create the per-change record: `reports/<module>/<YYYYMMDD>-<slug>.md`.
+6. Fill the record's Goal, Design, and Validation Method before relying on results.
+7. Define success criteria and validation checks.
+8. Make the minimal code change.
+9. Build affected targets.
+10. Run correctness checks.
+11. Run benchmark sanity checks if relevant.
+12. Populate Results and Conclusions in the record, with raw artifact paths.
+13. Commit with a traceable message.
+14. Create a PR or handoff report for review; include the reporting-hygiene items from Review handoff.
+15. For review feedback, add follow-up commits instead of amending reviewer-visible commits.
+
+### Performance-sensitive change
+
+1. Follow the standard checklist above.
+2. Benchmark only committed snapshots for decision-grade results.
+3. Run quick correctness before benchmark campaigns.
+4. Start long runs in detached `tmux` only after the short loop is green.
+5. Verify long-run startup with `tmux capture-pane`.
+6. Report running vs completed status accurately.
+
+### Cross-implementation or variant comparison
+
+1. Follow the standard checklist, including module-scoped records under `reports/<module>/`.
+2. Isolate each experimental variable in its own branch or worktree.
+3. Use the same benchmark harness and profiles for every variant.
+4. Tie each result to a commit, manifest, and record document.
+5. Compare raw outputs and generated summaries.
+6. Record methodology before interpreting results.
 
 ## C++ style and implementation guidance
 
