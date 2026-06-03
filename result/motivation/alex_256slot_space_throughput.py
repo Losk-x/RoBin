@@ -10,6 +10,11 @@ Usage:
   uv run --extra notebook python3 result/motivation/alex_256slot_space_throughput.py
 """
 
+# NOTE: This script depends on motivation_single_thread_uniform_100m_shuffled_summary.csv,
+# which is produced by a separate experiment (test_suite=22, 100M bulkload). If that
+# experiment is re-run, this script may produce different results. Re-run both experiments
+# together to keep the plot consistent.
+
 from pathlib import Path
 
 import pandas as pd

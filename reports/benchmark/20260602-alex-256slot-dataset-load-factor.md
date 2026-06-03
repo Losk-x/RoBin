@@ -27,6 +27,7 @@ Quick iteration probes rejected:
 
 ## Validation Method
 
+Benchmarked commit: `36f63c9` (`perf(competitor): add dataset-specific ALEX load-factor variants`).
 Build:
 
 ```bash
