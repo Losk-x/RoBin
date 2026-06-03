@@ -274,6 +274,7 @@ Use a scope that names the affected module or workflow area. Multi-scope commits
 13. Commit with a traceable message.
 14. Create a PR or handoff report for review; include the reporting-hygiene items from Review handoff.
 15. For review feedback, add follow-up commits instead of amending reviewer-visible commits.
+16. After the PR is merged or closed, remove the worktree.
 
 ### Performance-sensitive change
 
