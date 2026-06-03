@@ -1,6 +1,9 @@
 #include "../benchmark/binary_search.h"
 #include "./alex/alex.h"
 #include "./alex-256slot/alex.h"
+#include "./alex-256slot-lf019/alex.h"
+#include "./alex-256slot-lf020/alex.h"
+#include "./alex-256slot-lf024/alex.h"
 #include "./alexolc/alexolc.h"
 #include "./art/art.h"
 #include "./artolc/artolc.h"
@@ -61,6 +64,18 @@ public:
     } else if (index_type == "alex-256slot") {
       for (size_t i = 0; i < partition_num; i++) {
         index_[i] = new alex256SlotInterface<KEY_TYPE, PAYLOAD_TYPE>;
+      }
+    } else if (index_type == "alex-256slot-lf019") {
+      for (size_t i = 0; i < partition_num; i++) {
+        index_[i] = new alex256SlotLf019Interface<KEY_TYPE, PAYLOAD_TYPE>;
+      }
+    } else if (index_type == "alex-256slot-lf020") {
+      for (size_t i = 0; i < partition_num; i++) {
+        index_[i] = new alex256SlotLf020Interface<KEY_TYPE, PAYLOAD_TYPE>;
+      }
+    } else if (index_type == "alex-256slot-lf024") {
+      for (size_t i = 0; i < partition_num; i++) {
+        index_[i] = new alex256SlotLf024Interface<KEY_TYPE, PAYLOAD_TYPE>;
       }
     } else if (index_type == "btree") {
       for (size_t i = 0; i < partition_num; i++) {

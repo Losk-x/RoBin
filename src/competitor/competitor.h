@@ -16,6 +16,12 @@ indexInterface<KEY_TYPE, PAYLOAD_TYPE> *get_index(std::string index_type,
       index = new alexInterface<KEY_TYPE, PAYLOAD_TYPE>;
     } else if (index_type == "alex-256slot") {
       index = new alex256SlotInterface<KEY_TYPE, PAYLOAD_TYPE>;
+    } else if (index_type == "alex-256slot-lf019") {
+      index = new alex256SlotLf019Interface<KEY_TYPE, PAYLOAD_TYPE>;
+    } else if (index_type == "alex-256slot-lf020") {
+      index = new alex256SlotLf020Interface<KEY_TYPE, PAYLOAD_TYPE>;
+    } else if (index_type == "alex-256slot-lf024") {
+      index = new alex256SlotLf024Interface<KEY_TYPE, PAYLOAD_TYPE>;
     } else if (index_type == "pgm") {
       index = new pgmInterface<KEY_TYPE, PAYLOAD_TYPE>;
     } else if (index_type == "btree") {
