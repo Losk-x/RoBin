@@ -18,6 +18,14 @@ import matplotlib.pyplot as plt
 
 sns.set_theme(style="whitegrid", context="talk")
 
+plt.rcParams["font.family"] = "sans-serif"
+plt.rcParams["font.sans-serif"] = ["Carlito"]
+plt.rcParams["font.size"] = 14
+plt.rcParams["axes.titlesize"] = 16
+plt.rcParams["axes.labelsize"] = 14
+plt.rcParams["legend.fontsize"] = 13
+plt.rcParams["legend.title_fontsize"] = 13
+
 RESULT_DIR = Path(__file__).resolve().parent
 MOTIVATION_SUMMARY = RESULT_DIR / "motivation_single_thread_uniform_100m_shuffled_summary.csv"
 TUNING_SUMMARY = RESULT_DIR / "alex_256slot_dataset_load_factor_summary.csv"
@@ -95,6 +103,13 @@ print("throughput_data (melted)")
 print("=" * 80)
 print(throughput_data.to_string(index=False))
 print()
+
+# ── Normalize legend labels ─────────────────────────────────────────────────
+# Merge all alex-256slot(-lf*) variants into a single "alex-256slot" label
+# for cleaner plot legends. The printed tables above retain original names.
+throughput_data["index"] = throughput_data["index"].str.replace(
+    r"^alex-256slot(-.+)?$", "alex-256slot", regex=True
+)
 
 # ── Plot: insert throughput ─────────────────────────────────────────────────
 
